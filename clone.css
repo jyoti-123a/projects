@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-boxs;
+}
+:root{
+    --hoverTextColor: rgb(244, 51, 151);
+    --textColor : rgb(87, 85, 85);
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Noto Sans", sans-serif;
+    color: var(--textColor);
+}
+img{
+    width: 100%;
+}
+.header{
+    height: 72px;
+    outline: 1px solid #ccc;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+}
+.headerLeft{
+    display: flex;
+    align-items: center;
+}
+.logoContainer{
+    width: 155px;
+}
+.searchInputContainer{
+    width: 400px;
+    height: 45px;
+    outline:1px solid rgb(126, 126, 126);
+    display: flex;
+    margin-left: 25px;
+    border-radius: 3px;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+.searchicon{
+    width: 20px;
+    margin: 6px;
+}
+form{
+    width: 100%;
+}
+.inputSearch{
+    width: 100%;
+    outline: none;  
+    border: none;
+    font-size: 16px;
+}
+#closeSearch{
+    display: none;
+}
+.searchRecentModal{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    top:45px;
+    background-color: white;  
+    height: 400px;
+    width: 96%;
+    display: none;
+    padding: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.searchInputContainer:focus-within .searchRecentModal{
+    display: block;
+}
+.recentIcon{
+    width: 20px;
+    margin-right: 10px;
+}
+.recentItem{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/***rigth***/
+.mobileIcon{
+    width: 15px;
+    margin: 5px;
+}
+.downloadContainer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 10px;
+    
+}
+.downloadContainer1{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 20px;
+    position: relative;
+    background-color: white;
+     
+}
+.downloadContainer1:hover{
+   color: var(--hoverTextColor);
+   cursor: pointer;
+}
+.downloadBtn{
+    display: block;
+    width: 180px;
+    margin-top: 5px;
+}
+.downloadhoverBtnContainer{
+    position: absolute;
+    bottom: 0;
+    top: 40px;
+    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);*/
+    width: 200px;
+   /*background-color: red;*/
+    display: none;
+    height: 200px;
+    padding: 10px;
+    margin-left: -30px;
+    color:var(--textColor);
+}
+.downloadContainer:hover .downloadhoverBtnContainer,
+.downloadContainer:focus .downloadhoverBtnContainer{
+    display: block;
+}
+.downloadContainer p{
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+.profileAndcart{
+    display: flex;
+    align-items: center;
+
+}
+.profileAndcart:hover,
+.profileAndcart:focus{
+    color: var(--hoverTextColor);
+}
+.profileAndcart,
+.cartIcon{
+    width: 20px;
+    padding: 0px 40px;
+}
+.profileAndcart p{
+    margin:0;
+    padding: 0;
+}
+.profileContainer,
+.cartContainer{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.becomesupplierContainer{
+    padding: 0px 30px;
+    border-left: 1.5px solid #ccc;
+    border-right: 1.5px solid #ccc;
+    font-size: 17px;
+}
+/* navigation css */
+nav{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 55px;
+    
+}
+nav ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    height: 100%;
+    margin: 0;
+}
+nav ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+nav ul li:hover{
+    color: var(--hoverTextColor);
+    border-bottom: 4px solid var(--hoverTextColor);
+}
+
+
+
+/**module box submenu**/
+.subMenu{
+    position: absolute;
+   /* height: 400px;*/
+    top: 135px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: none;
+    margin: 0px 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+nav ul li:hover .subMenu{
+    display: block;
+}
+.subMenu p{
+    color:var(--textColor);
+}
+.submenulist{
+    display: flex;
+}
+.column{
+    margin-right: 40px;
+
+}
